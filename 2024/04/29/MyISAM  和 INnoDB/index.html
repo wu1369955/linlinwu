@@ -45,7 +45,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2024-04-29T08:50:45.000Z">
-<meta property="article:modified_time" content="2024-04-29T08:52:52.024Z">
+<meta property="article:modified_time" content="2024-04-29T09:11:13.320Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="Mysql">
 <meta name="twitter:card" content="summary">
@@ -1745,7 +1745,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1714380781508),
+    lastupdate: new Date(1714383058251),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["toc"],
@@ -2592,7 +2592,37 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>MyISAM是另一种存储引擎，它没有提供像InnoDB那样的事务处理和行级锁定功能。MyISAM更适合于读密集型应用，例如只进行插入和查询操作的应用。它具有较低的内存和磁盘空间开销，但在并发写入场景下性能可能会受到影响。</p>
 <p>MyISAM支持全文索引和压缩表格，这在某些特定的应用场景下很有用。此外，MyISAM表格的维护和修复也相对简单。</p>
 <p>总结来说，如果你需要支持事务处理、并发控制和数据完整性，或者有高并发读写负载的应用，那么InnoDB是更好的选择。如果你有读密集型的应用，或者对全文索引和压缩表格有特殊需求，那么MyISAM可能更适合。</p>
-<h4 id="一、哈希索引"><a href="#一、哈希索引" class="headerlink" title="一、哈希索引"></a>一、哈希索引</h4><p>哈希索引（Hash Index）是一种在数据库中用于快速查找数据的索引结构。它基于哈希函数（Hash Function）将关键字映射到索引中的槽位，从而实现高效的数据检索。</p>
+<p><img src="/MyISAM%20%20%E5%92%8C%20INnoDB/image-20240429170628775-17143815936841.png" class="lazyload" data-srcset="/MyISAM%20%20%E5%92%8C%20INnoDB/image-20240429170628775-17143815936841.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20240429170628775"></p>
+<p><strong>1.MyISAM</strong></p>
+<p><img src="/MyISAM%20%20%E5%92%8C%20INnoDB/image-20240429170737293.png" class="lazyload" data-srcset="/MyISAM%20%20%E5%92%8C%20INnoDB/image-20240429170737293.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20240429170737293"></p>
+<p>从这张图可以发现，这个存储引擎通过MYI的B+树结构来查找记录页，再根据记录页查找记录。并且支持全文索引、B树索引和数据压缩。</p>
+<p>支持数据的类型也有三种：</p>
+<p>（1）静态固定长度表</p>
+<p>这种方式的优点在于存储速度非常快，容易发生缓存，而且表发生损坏后也容易修复。缺点是占空间。这也是默认的存储格式。</p>
+<p>（2）动态可变长表</p>
+<p>优点是节省空间，但是一旦出错恢复起来比较麻烦。</p>
+<p>（3）压缩表</p>
+<p>上面说到支持数据压缩，说明肯定也支持这个格式。在数据文件发生错误时候，可以使用check table工具来检查，而且还可以使用repair table工具来恢复。</p>
+<p>有一个重要的特点那就是不支持事务，但是这也意味着他的存储速度更快，如果你的读写操作允许有错误数据的话，只是追求速度，可以选择这个存储引擎。</p>
+<p>使用这个存储引擎，每个MyISAM在磁盘上存储成三个文件。</p>
+<p>（1）frm文件：存储表的定义数据</p>
+<p>（2）MYD文件：存放表具体记录的数据</p>
+<p>（3）MYI文件：存储索引</p>
+<p>frm和MYI可以存放在不同的目录下。MYI文件用来存储索引，但仅保存记录所在页的指针，索引的结构是B+树结构。下面这张图就是MYI文件保存的机制：</p>
+<p><strong>2. INnoDB</strong></p>
+<p>InnoDB是默认的数据库存储引擎，他的主要特点有：</p>
+<p>（1）可以通过自动增长列，方法是auto_increment。</p>
+<p>（2）支持事务。默认的事务隔离级别为可重复度，通过MVCC（并发版本控制）来实现的。</p>
+<p>（3）使用的锁粒度为行级锁，可以支持更高的并发；</p>
+<p>（4）支持外键约束；外键约束其实降低了表的查询速度，但是增加了表之间的耦合度。</p>
+<p>（5）配合一些热备工具可以支持在线热备份；</p>
+<p>（6）在InnoDB中存在着缓冲管理，通过缓冲池，将索引和数据全部缓存起来，加快查询的速度；</p>
+<p>（7）对于InnoDB类型的表，其数据的物理组织形式是聚簇表。所有的数据按照主键来组织。数据和索引放在一块，都位于B+数的叶子节点上；</p>
+<p>当然InnoDB的存储表和索引也有下面两种形式：</p>
+<p>（1）使用共享表空间存储：所有的表和索引存放在同一个表空间中。</p>
+<p>（2）使用多表空间存储：表结构放在frm文件，数据和索引放在IBD文件中。分区表的话，每个分区对应单独的IBD文件，分区表的定义可以查看我的其他文章。使用分区表的好处在于提升查询效率。</p>
+<p>对于InnoDB来说，最大的特点在于支持事务。但是这是以损失效率来换取的。</p>
+<h3 id="附录"><a href="#附录" class="headerlink" title="附录"></a>附录</h3><h4 id="一、哈希索引"><a href="#一、哈希索引" class="headerlink" title="一、哈希索引"></a>一、哈希索引</h4><p>哈希索引（Hash Index）是一种在数据库中用于快速查找数据的索引结构。它基于哈希函数（Hash Function）将关键字映射到索引中的槽位，从而实现高效的数据检索。</p>
 <p>哈希索引的工作原理如下：</p>
 <ol>
 <li>哈希函数：哈希函数是关键的组成部分，它接收输入的关键字并生成一个固定大小的哈希值。哈希值是一个在索引中用于定位槽位的地址。</li>
@@ -2642,7 +2672,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-04-29T16:52:52+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-04-29T17:11:13+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
     <p>更新于：Apr 29, 2024</p>
@@ -2725,12 +2755,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class="prev-next">
       
-      
-        <a class='next' href='/2024/04/29/%E5%AD%98%E5%82%A8%E8%BF%87%E7%A8%8B/'>
-          <p class='title'>Apr 29, 2024<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>title: 存储过程data:  2023-10-25 10:16:18
-</p>
+        <a class='prev' href='/2024/04/29/%E8%A7%A6%E5%8F%91%E5%99%A8%E4%B8%8E%E4%BA%8B%E5%8A%A1/'>
+          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>触发器与事务</p>
+          <p class='content'>1. 数据库触发器数据库触发器（Database Triggers）是一种在特定事件发生时自动执行的数据库操作。触发器可以在数据插入、更新或删除等操作之前或之后触发，用于实现数据的约束、验证、日...</p>
         </a>
+      
       
     </div>
   
@@ -2787,7 +2816,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E5%93%88%E5%B8%8C%E7%B4%A2%E5%BC%95"><span class="toc-text">一、哈希索引</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E5%88%B7%E6%96%B0%E9%82%BB%E6%8E%A5%E9%A1%B5"><span class="toc-text">二、刷新邻接页</span></a>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%99%84%E5%BD%95"><span class="toc-text">附录</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E5%93%88%E5%B8%8C%E7%B4%A2%E5%BC%95"><span class="toc-text">一、哈希索引</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E5%88%B7%E6%96%B0%E9%82%BB%E6%8E%A5%E9%A1%B5"><span class="toc-text">二、刷新邻接页</span></a>
     </div>
   </section>
 
@@ -3357,7 +3386,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Hexo","url":"http://yoursite.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://yoursite.com/","sameAs":["https://github.com/volantis-x"],"description":"test description"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://yoursite.com/","name":"Hexo"}},{"@type":"ListItem","position":3,"item":{"@id":"http://yoursite.com/2024/04/29/MyISAM  和 INnoDB/","name":"MyISAM 和INnoDB 区别"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Hexo","url":"http://yoursite.com/","keywords":null,"description":"test description","author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://yoursite.com/","description":"test description"},"publisher":{"@type":"Organization","name":"Hexo","url":"http://yoursite.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://yoursite.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"MyISAM 和INnoDB 区别","description":"test description","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://yoursite.com/2024/04/29/MyISAM%20%20%E5%92%8C%20INnoDB/"},"author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://yoursite.com/"},"publisher":{"@type":"Organization","name":"Hexo","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://yoursite.com/2024/04/29/MyISAM%20%20%E5%92%8C%20INnoDB/","wordCount":0,"datePublished":"2024-04-29T08:50:45.000Z","dateModified":"2024-04-29T08:52:52.024Z","keywords":"Mysql","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Hexo","url":"http://yoursite.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://yoursite.com/","sameAs":["https://github.com/volantis-x"],"description":"test description"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://yoursite.com/","name":"Hexo"}},{"@type":"ListItem","position":3,"item":{"@id":"http://yoursite.com/2024/04/29/MyISAM  和 INnoDB/","name":"MyISAM 和INnoDB 区别"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Hexo","url":"http://yoursite.com/","keywords":null,"description":"test description","author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://yoursite.com/","description":"test description"},"publisher":{"@type":"Organization","name":"Hexo","url":"http://yoursite.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://yoursite.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"MyISAM 和INnoDB 区别","description":"test description","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://yoursite.com/2024/04/29/MyISAM%20%20%E5%92%8C%20INnoDB/"},"author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://yoursite.com/"},"publisher":{"@type":"Organization","name":"Hexo","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://yoursite.com/2024/04/29/MyISAM%20%20%E5%92%8C%20INnoDB/","wordCount":0,"datePublished":"2024-04-29T08:50:45.000Z","dateModified":"2024-04-29T09:11:13.320Z","keywords":"Mysql","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
