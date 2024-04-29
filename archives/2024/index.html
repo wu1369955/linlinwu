@@ -1742,7 +1742,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1714349265381),
+    lastupdate: new Date(1714379741020),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["toc"],
@@ -2522,6 +2522,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
         
+          
+        
+          
+        
       
     
     
@@ -2529,7 +2533,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           <div class='post-wrapper'>
             <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2024/04/29/hello-world/">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2024/04/29/存储过程/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="Hexo">
   </span>
@@ -2547,16 +2551,20 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
     <h2 class="article-title"  itemprop="name headline">
-      <a href="/2024/04/29/hello-world/"  itemprop="url">
-        Hello World
+      <a href="/2024/04/29/%E5%AD%98%E5%82%A8%E8%BF%87%E7%A8%8B/"  itemprop="url">
+        Apr 29, 2024
       </a>
     </h2>
   
   <div class='md article-desc' itemprop="articleBody">
     
       
-        Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Qu...
+        一、存储过程的优点
+通过把处理封装在容易使用的单元中，简化复杂的操作;
+
+简化对变动的管理。如果表名、列名或业务逻辑有变化。只需要更改存储过程的代码，使用它的人员不会改自己的代码；
+
+通常存储过程有助于提高应用程序的性能。当创建的存储过程被编译之后，就存储在数据库中。 但是，MySQL 实现的存储过程略有不同。MySQL 存储过程按需编译。在编译存储过程之后，MySQL 将其放入缓存中。My...
       
     
   </div>
@@ -2564,12 +2572,124 @@ Qu...
     <div class='meta-v3' line_style='solid'>
       <div>
         
-        <time itemprop="dateCreated datePublished" datetime="2024-04-29T08:04:08+08:00">2024-04-29</time>
+        <time itemprop="dateCreated datePublished" datetime="2024-04-29T16:34:59+08:00">2024-04-29</time>
         
       </div>
       
         <div>
-          <a class='readmore' href='/2024/04/29/hello-world/' itemprop="url">
+          <a class='readmore' href='/2024/04/29/%E5%AD%98%E5%82%A8%E8%BF%87%E7%A8%8B/' itemprop="url">
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2024/04/29/MyISAM和InnoDB/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Hexo">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="Hexo">
+    <meta itemprop="description" content="test description">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/2024/04/29/MyISAM%E5%92%8CInnoDB/"  itemprop="url">
+        Apr 29, 2024
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      
+        MyISAM  和 INnoDBInnoDB和MyISAM是MySQL数据库中两种常用的存储引擎。
+InnoDB是一种支持事务处理和行级锁定的存储引擎。它是MySQL默认的存储引擎，也被认为是更现代和可靠的选择。InnoDB支持事务的ACID特性（原子性、一致性、隔离性和持久性），这对于需要严格数据完整性和并发控制的应用程序非常重要。
+InnoDB还提供了外键约束、并发性能优化、崩溃恢复功能...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time itemprop="dateCreated datePublished" datetime="2024-04-29T16:34:59+08:00">2024-04-29</time>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2024/04/29/MyISAM%E5%92%8CInnoDB/' itemprop="url">
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2024/04/29/ipfs/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Hexo">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="Hexo">
+    <meta itemprop="description" content="test description">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/2024/04/29/ipfs/"  itemprop="url">
+        Apr 29, 2024
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      
+        12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777879808182838485#!/usr/bin/env python# -*- coding: u...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time itemprop="dateCreated datePublished" datetime="2024-04-29T16:34:59+08:00">2024-04-29</time>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2024/04/29/ipfs/' itemprop="url">
             Read More
           </a>
         </div>
@@ -2668,38 +2788,6 @@ Qu...
     
     
       
-  
-  <section class="widget category desktop pjax">
-    
-  <header>
-    
-      <a href='/blog/categories/'><i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i><span class='name'>文章分类</span></a>
-    
-  </header>
-
-
-    <div class='content'>
-      <ul class="entry navigation">
-        
-          <li><a class="flat-box"
-            title="/categories/Foo/" href="/categories/Foo/"
-            active-action="action-categoriesFoo"
-            ><div class='name'>Foo</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/Foo/Bar/" href="/categories/Foo/Bar/"
-            active-action="action-categoriesFooBar"
-            ><div class='name'>Bar</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/Foo/Bar/Baz/" href="/categories/Foo/Bar/Baz/"
-            active-action="action-categoriesFooBarBaz"
-            ><div class='name'>Baz</div><div class='badge'>(1)</div></a></li>
-        
-      </ul>
-    </div>
-  </section>
-
 
     
   
@@ -2708,21 +2796,6 @@ Qu...
     
     
       
-  
-  <section class="widget tagcloud desktop mobile pjax">
-    
-  <header>
-    
-      <a href='/blog/tags/'><i class="fa-solid fa-tags fa-fw" aria-hidden="true"></i><span class='name'>热门标签</span></a>
-    
-  </header>
-
-
-    <div class='content'>
-      <a href="/tags/Bar/" style="font-size: 24px; color: #555">Bar</a> <a href="/tags/Baz/" style="font-size: 14px; color: #999">Baz</a> <a href="/tags/Foo/" style="font-size: 24px; color: #555">Foo</a>
-    </div>
-  </section>
-
 
     
   
