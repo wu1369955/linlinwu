@@ -5,8 +5,8 @@
   <meta name="Volantis" content="5.8.0">
   <meta charset="utf-8">
   <!-- SEO相关 -->
-  
-  <link rel="canonical" href="http://yoursite.com/2024/04/29/触发器与事务/"/>
+  <meta name="robots" content="noindex,follow">
+  <link rel="canonical" href="http://yoursite.com/categories/mysql/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -33,21 +33,18 @@
 
   <!-- feed -->
   <!-- 页面元数据 -->
-  <title>触发器与事务 - Hexo</title>
-  <meta name="keywords" content="Mysql,null">
+  <title>Category: Mysql - Hexo</title>
+  <meta name="keywords" content="null">
   <meta desc name="description" content="test description - John Doe - Hexo">
   
-<meta property="og:type" content="article">
-<meta property="og:title" content="触发器与事务">
-<meta property="og:url" content="http://yoursite.com/2024/04/29/%E8%A7%A6%E5%8F%91%E5%99%A8%E4%B8%8E%E4%BA%8B%E5%8A%A1/index.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/categories/Mysql/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="1. 数据库触发器数据库触发器（Database Triggers）是一种在特定事件发生时自动执行的数据库操作。触发器可以在数据插入、更新或删除等操作之前或之后触发，用于实现数据的约束、验证、日志记录等功能。在 MySQL 中，可以使用 CREATE TRIGGER 语句来创建触发器。以下是一个创建触发器的示例： 1234CREATE TRIGGER trigger_nameBEFORE INSE">
+<meta property="og:description" content="test description">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-<meta property="article:published_time" content="2024-04-29T09:17:17.000Z">
-<meta property="article:modified_time" content="2024-04-30T00:11:07.803Z">
 <meta property="article:author" content="John Doe">
-<meta property="article:tag" content="Mysql">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
   <style>
@@ -2442,7 +2439,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
       <!-- see: /layout/_partial/scripts/_ctrl/coverCtrl.ejs -->
-      <div id="none" class='cover-wrapper post dock' style="display: none;">
+      <div id="none" class='cover-wrapper  dock' style="display: none;">
         
   <div class='cover-bg lazyload placeholder' data-bg="https://gcore.jsdelivr.net/gh/MHG-LAB/cron@gh-pages/bing/bing.jpg"></div>
 
@@ -2516,8 +2513,95 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <div id="safearea">
         <div class="body-wrapper">
           
+
 <div id="l_main" class=''>
-  <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
+  
+    
+      
+  <section class="post-list">
+    
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+    
+    
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2024/04/29/布隆过滤器/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Hexo">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="Hexo">
+    <meta itemprop="description" content="test description">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/2024/04/29/%E5%B8%83%E9%9A%86%E8%BF%87%E6%BB%A4%E5%99%A8/"  itemprop="url">
+        布隆过滤器
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      
+        1. 布隆过滤器
+布隆过滤器（Bloom Filter）是 1970 年由布隆提出的。它实际上是一个很长的二进制向量和一系列随机映射函数。布隆过滤器可以用于检索一个元素是否在一个集合中。它的优点是空间效率和查询时间都比一般的算法要好的多，缺点是有一定的误识别率和删除困难。
+上面这句介绍比较全面的描述了什么是布隆过滤器，如果还是不太好理解的话，就可以把布隆过滤器理解为一个 set 集合，我们可...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time itemprop="dateCreated datePublished" datetime="2024-04-29T17:21:38+08:00">2024-04-29</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/Mysql/">Mysql</a>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a href="/categories/Mysql/" itemprop="url"><span itemprop="name">Mysql</span></a>
+            </span>
+          
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2024/04/29/%E5%B8%83%E9%9A%86%E8%BF%87%E6%BB%A4%E5%99%A8/' itemprop="url">
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
   <link itemprop="mainEntityOfPage" href="http://yoursite.com/2024/04/29/触发器与事务/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="Hexo">
@@ -2527,240 +2611,197 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <meta itemprop="description" content="test description">
   </span>
   
-
-
+  
   
     <span hidden>
       <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
     </span>
   
-  <div class="article-meta" id="top">
+  
     
-    
-    
-      <h1 class="title" itemprop="name headline">
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/2024/04/29/%E8%A7%A6%E5%8F%91%E5%99%A8%E4%B8%8E%E4%BA%8B%E5%8A%A1/"  itemprop="url">
         触发器与事务
-      </h1>
-      <div class='new-meta-box'>
-        
-          
-            
-<div class='new-meta-item author' itemprop="author" itemscope itemtype="http://schema.org/Person">
-  <a itemprop="url" class='author' href="/" rel="nofollow">
-    <img itemprop="image" src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
-    <p itemprop="name">请设置文章作者</p>
-  </a>
-</div>
-
-          
-        
-          
-            
-  <div class='new-meta-item category'>
-    <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
-    <a class="category-link" href="/categories/Mysql/">Mysql</a>
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
     
-      <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-        <a href="/categories/Mysql/" itemprop="url"><span itemprop="name">Mysql</span></a>
-      </span>
+      
+        1. 数据库触发器数据库触发器（Database Triggers）是一种在特定事件发生时自动执行的数据库操作。触发器可以在数据插入、更新或删除等操作之前或之后触发，用于实现数据的约束、验证、日志记录等功能。在 MySQL 中，可以使用 CREATE TRIGGER 语句来创建触发器。以下是一个创建触发器的示例：
+1234CREATE TRIGGER trigger_nameBEFORE I...
+      
     
   </div>
-
-
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time itemprop="dateCreated datePublished" datetime="2024-04-29T17:17:17+08:00">2024-04-29</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/Mysql/">Mysql</a>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a href="/categories/Mysql/" itemprop="url"><span itemprop="name">Mysql</span></a>
+            </span>
           
         
-          
-            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2024-04-29T17:17:17+08:00">
-  <a class='notlink'>
-    <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：Apr 29, 2024</p>
-  </a>
-</div>
-
-          
-        
-          
-            
-
-
-
-          
-        
-        <!-- Custom Files topMeta begin-->
-        
-        <!-- Custom Files topMeta end-->
       </div>
-    
-  </div>
-
-
-  <div id="layoutHelper-page-plugins"></div>
-  <div id="post-body" itemprop="articleBody">
-    <h1 id="1-数据库触发器"><a href="#1-数据库触发器" class="headerlink" title="1. 数据库触发器"></a>1. 数据库触发器</h1><p>数据库触发器（Database Triggers）是一种在特定事件发生时自动执行的数据库操作。触发器可以在数据插入、更新或删除等操作之前或之后触发，用于实现数据的约束、验证、日志记录等功能。在 MySQL 中，可以使用 CREATE TRIGGER 语句来创建触发器。以下是一个创建触发器的示例：</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TRIGGER</span> trigger_name</span><br><span class="line">BEFORE <span class="keyword">INSERT</span> <span class="keyword">ON</span> table_name <span class="keyword">FOR</span> <span class="keyword">EACH</span> <span class="type">ROW</span> <span class="keyword">BEGIN</span></span><br><span class="line"><span class="comment">-- 触发器执行的操作</span></span><br><span class="line"><span class="keyword">END</span>;</span><br></pre></td></tr></table></figure>
-
-<p>上述示例创建了一个在插入数据到 table_name 表之前触发的触发器。可以根据需求选择 BEFORE、AFTER 关键字来指定触发器的触发时机。FOR EACH ROW 表示每一行数据都会触发触发器。</p>
-<p>在 BEGIN 和 END 之间，可以编写触发器执行的操作，例如插入、更新、删除数据，或者进行数据验证、约束等操作。可以使用 NEW 关键字引用插入或更新的新数据，OLD 关键字引用被更新或删除的旧数据。以下是一个简单的触发器示例，用于在插入数据到 orders 表之前自动更新订单创建时间：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">CREATE TRIGGER update_create_time</span><br><span class="line">BEFORE INSERT ON orders</span><br><span class="line">FOR EACH ROW</span><br><span class="line">BEGIN</span><br><span class="line">SET NEW.create_time = NOW(); END;</span><br></pre></td></tr></table></figure>
-
-<p>数据库事务（Database Transaction）是一组数据库操作的集合，这些操作要么全部成功执行，要么全部回滚，保证了数据库的一致性和完整性。</p>
-<h1 id="2-数据库事务"><a href="#2-数据库事务" class="headerlink" title="2 . 数据库事务"></a>2 . 数据库事务</h1><p>事务具有以下四个特性，通常被称为 ACID 特性：</p>
-<p><strong>1.原子性（Atomicity）</strong>：事务中的所有操作要么全部成功执行，要么全部回滚。如果任何一个操作失败，整个事务将被回滚到初始状态，不会对数据库产生影响。</p>
-<p><strong>2.一致性（Consistency）</strong>：事务在开始和结束时，数据库的状态必须保持一致。事务执行的操作必须满足数据库定义的约束、触发器和规则，以确保数据的完整性。</p>
-<p><strong>3.隔离性（Isolation）：</strong>事务的执行应该与其他事务隔离开来，每个事务都应该感知不到其他并发事务的存在。隔离级别可以控制事务之间的相互影响程度，包括读取未提交数据、读取已提交数据、可重复读、串行化等级别。</p>
-<p><strong>4.持久性（Durability）：</strong>一旦事务提交，其结果应该永久保存在数据库中，并且不能因为系统故障或崩溃而丢失。数据库系统通过将事务日志写入磁盘来实现持久性。</p>
-<p>在使用数据库事务时，通常遵循以下步骤：</p>
-<p>开启事务：通过 BEGIN、START TRANSACTION 等语句开始一个新的事务。</p>
-<p>执行操作：执行一系列数据库操作，包括插入、更新、删除等。</p>
-<p>提交或回滚：如果所有操作都成功执行，使用 COMMIT 语句提交事务。如果发生错误或不符合条件，使用 ROLLBACK 语句回滚事务。</p>
-<p>事务可以在应用程序中进行控制，也可以使用存储过程或触发器等数据库内部机制来实现。需要根据具体的业务需求和数据库系统的支持来选择适当的事务管理方式。同时，也需要注意事务的并发性能和锁定问题，以避免长时间的事务阻塞其他操作。</p>
-
-  </div>
-  
-  
-    
-    <div class='footer'>
-       <!-- 参考资料、相关资料等 -->
       
-       <!-- 相关文章 -->
-      
-      <!-- 版权声明组件 -->
-      
-      <!-- 打赏组件 -->
+        <div>
+          <a class='readmore' href='/2024/04/29/%E8%A7%A6%E5%8F%91%E5%99%A8%E4%B8%8E%E4%BA%8B%E5%8A%A1/' itemprop="url">
+            Read More
+          </a>
+        </div>
       
     </div>
   
-  
-    
 
-
-  <div class='article-meta' id="bottom">
-    <div class='new-meta-box'>
-      
-        
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-04-30T08:11:07+08:00">
-  <a class='notlink'>
-    <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：Apr 30, 2024</p>
-  </a>
 </div>
 
+          </div>
         
       
         
-          
-  
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Mysql/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>Mysql</p></a></div>
-  <span hidden itemprop="keywords">Mysql</span>
-
-
-        
-      
-        
-          
-  <div class="new-meta-item share -mob-share-list">
-  <div class="-mob-share-list share-body">
-    
-      
-        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2024/04/29/%E8%A7%A6%E5%8F%91%E5%99%A8%E4%B8%8E%E4%BA%8B%E5%8A%A1/&title=触发器与事务 - Hexo&summary="
-          
-          >
-          
-            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qq.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qq.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
-          
-        </a>
-      
-    
-      
-        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://yoursite.com/2024/04/29/%E8%A7%A6%E5%8F%91%E5%99%A8%E4%B8%8E%E4%BA%8B%E5%8A%A1/&title=触发器与事务 - Hexo&summary="
-          
-          >
-          
-            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qzone.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qzone.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
-          
-        </a>
-      
-    
-      
-        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2024/04/29/%E8%A7%A6%E5%8F%91%E5%99%A8%E4%B8%8E%E4%BA%8B%E5%8A%A1/&title=触发器与事务 - Hexo&summary="
-          
-          >
-          
-            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/weibo.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/weibo.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
-          
-        </a>
-      
-    
-      
-    
-      
-    
-  </div>
-</div>
-
-
-
-        
-      
-    </div>
-    <!-- Custom Files bottomMeta begin -->
-    
-    <!-- Custom Files bottomMeta end -->
-  </div>
-
-
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2024/04/29/数据库查询优化/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Hexo">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="Hexo">
+    <meta itemprop="description" content="test description">
+  </span>
   
   
-
   
-    <div class="prev-next">
-      
-        <a class='prev' href='/2024/04/29/%E5%B8%83%E9%9A%86%E8%BF%87%E6%BB%A4%E5%99%A8/'>
-          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>布隆过滤器</p>
-          <p class='content'>1. 布隆过滤器
-布隆过滤器（Bloom Filter）是 1970 年由布隆提出的。它实际上是一个很长的二进制向量和一系列随机映射函数。布隆过滤器可以用于检索一个元素是否在一个集合中。它的优点...</p>
-        </a>
-      
-      
-        <a class='next' href='/2024/04/29/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%9F%A5%E8%AF%A2%E4%BC%98%E5%8C%96/'>
-          <p class='title'>数据库查询优化<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>数据库查询优化数据库查询优化是提高数据库性能的重要手段之一，以下是一些常用的数据库查询优化方法：
-1. **索引优化**：索引是提高查询性能的关键。对于经常被查询的字段，应该建立索引以加快查询速...</p>
-        </a>
-      
-    </div>
-  
-  <!-- Custom Files postEnd begin-->
-  
-  <!-- Custom Files postEnd end-->
-</article>
-
-
-  
-
-
-  <article class="post white-box shadow floatable blur" id="comments">
     <span hidden>
-      <meta itemprop="discussionUrl" content="/2024/04/29/%E8%A7%A6%E5%8F%91%E5%99%A8%E4%B8%8E%E4%BA%8B%E5%8A%A1/index.html#comments">
+      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
     </span>
-    <p ct><i class='fa-solid fa-comments'></i> 评论</p>
+  
+  
     
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/2024/04/29/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%9F%A5%E8%AF%A2%E4%BC%98%E5%8C%96/"  itemprop="url">
+        数据库查询优化
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      
+        数据库查询优化数据库查询优化是提高数据库性能的重要手段之一，以下是一些常用的数据库查询优化方法：
+1. **索引优化**：索引是提高查询性能的关键。对于经常被查询的字段，应该建立索引以加快查询速度。但是，过多的索引会降低写入性能，因此需要根据实际情况进行权衡和选择。
+2. **查询语句优化**：合理的查询语句可以减少不必要的计算和 IO 操作，从而提高查询性能。例如，避免使用 SELECT ...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time itemprop="dateCreated datePublished" datetime="2024-04-29T17:13:18+08:00">2024-04-29</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/Mysql/">Mysql</a>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a href="/categories/Mysql/" itemprop="url"><span itemprop="name">Mysql</span></a>
+            </span>
+          
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2024/04/29/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%9F%A5%E8%AF%A2%E4%BC%98%E5%8C%96/' itemprop="url">
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
 
-    <div id="layoutHelper-comments"></div>
+</div>
 
-  </article>
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2024/04/29/MyISAM  和 INnoDB/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Hexo">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="Hexo">
+    <meta itemprop="description" content="test description">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/2024/04/29/MyISAM%20%20%E5%92%8C%20INnoDB/"  itemprop="url">
+        MyISAM 和INnoDB 区别
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      
+        MyISAM 和 INnoDBInnoDB 和 MyISAM 是 MySQL 数据库中两种常用的存储引擎。
+InnoDB 是一种支持事务处理和行级锁定的存储引擎。它是 MySQL 默认的存储引擎，也被认为是更现代和可靠的选择。InnoDB 支持事务的 ACID 特性（原子性、一致性、隔离性和持久性），这对于需要严格数据完整性和并发控制的应用程序非常重要。
+InnoDB 还提供了外键约束、并发...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time itemprop="dateCreated datePublished" datetime="2024-04-29T16:50:45+08:00">2024-04-29</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/Mysql/">Mysql</a>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a href="/categories/Mysql/" itemprop="url"><span itemprop="name">Mysql</span></a>
+            </span>
+          
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2024/04/29/MyISAM%20%20%E5%92%8C%20INnoDB/' itemprop="url">
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+    
+  </section>
+  
+    
+  
 
 
-
-
-
-
+    
+  
 </div>
 <aside id='l_side' itemscope itemtype="http://schema.org/WPSideBar">
   
@@ -2769,48 +2810,134 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       
+<section class="widget blogger desktop mobile pjax">
+  <div class='content'>
+    
+      
+        <a class='avatar flat-box rectangle' href='/about/'>
+          <img no-lazy src='https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/Logo-NavBar@3x.png'/>
+        </a>
+      
+    
+    
+      <div class='text'>
+        
+        
+        
+          <p><span id="jinrishici-sentence">Hexo</span></p>
+          <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+        
+      </div>
+    
+    
+      <div class="social-wrapper">
+        
+          
+            <a href="/atom.xml"
+              class="social fa-solid fa-rss flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+              
+            </a>
+          
+        
+          
+            <a href="mailto:me@xxx.com"
+              class="social fa-solid fa-envelope flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+              
+            </a>
+          
+        
+          
+            <a href="https://github.com/volantis-x/"
+              class="social fab fa-github flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+              
+            </a>
+          
+        
+          
+            <a href="/"
+              class="social fa-solid fa-headphones-alt flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+              
+            </a>
+          
+        
+      </div>
+    
+  </div>
+</section>
+
     
   
 
-
-<div class="widget-sticky pjax">
-
   
+    
+    
+      
   
-
-
-  <section class="widget toc-wrapper desktop mobile " id="toc-div" >
+  <section class="widget category desktop pjax">
     
   <header>
     
-      <i class="fa-solid fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+      <a href='/blog/categories/'><i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i><span class='name'>文章分类</span></a>
     
   </header>
 
 
     <div class='content'>
+      <ul class="entry navigation">
         
+          <li><a class="flat-box"
+            title="/categories/Mysql/" href="/categories/Mysql/"
+            active-action="action-categoriesMysql"
+            ><div class='name'>Mysql</div><div class='badge'>(4)</div></a></li>
+        
+      </ul>
     </div>
   </section>
 
+
+    
   
+
+  
+    
+    
+      
+  
+  <section class="widget tagcloud desktop mobile pjax">
+    
+  <header>
+    
+      <a href='/blog/tags/'><i class="fa-solid fa-tags fa-fw" aria-hidden="true"></i><span class='name'>热门标签</span></a>
+    
+  </header>
+
+
+    <div class='content'>
+      <a href="/tags/Mysql/" style="font-size: 14px; color: #999">Mysql</a>
+    </div>
+  </section>
+
+
+    
+  
+
+  
+
+
+<div class="widget-sticky pjax">
 
 </div>
 
 
 <!-- 没有 pjax 占位会报错 万恶的 pjax -->
-
-  <div class="pjax">
-    <!-- pjax占位 -->
-  </div>
-
-  <div class="pjax">
-    <!-- pjax占位 -->
-  </div>
-
-  <div class="pjax">
-    <!-- pjax占位 -->
-  </div>
 
   <div class="pjax">
     <!-- pjax占位 -->
@@ -2838,14 +2965,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </aside>
 
 
-
           <!--此文件用来存放一些不方便取值的变量-->
 <!--思路大概是将值藏到重加载的区域内-->
 
 <pjax>
 <script>
   window.pdata={}
-  pdata.ispage=true;
+  pdata.ispage=false;
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   pdata.commentConfig={};
@@ -3359,7 +3485,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Hexo","url":"http://yoursite.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://yoursite.com/","sameAs":["https://github.com/volantis-x"],"description":"test description"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://yoursite.com/","name":"Hexo"}},{"@type":"ListItem","position":2,"item":{"@id":"http://yoursite.com/categories/Mysql/","name":"Mysql"}},{"@type":"ListItem","position":3,"item":{"@id":"http://yoursite.com/2024/04/29/触发器与事务/","name":"触发器与事务"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Hexo","url":"http://yoursite.com/","keywords":null,"description":"test description","author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://yoursite.com/","description":"test description"},"publisher":{"@type":"Organization","name":"Hexo","url":"http://yoursite.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://yoursite.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"触发器与事务","description":"test description","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://yoursite.com/2024/04/29/%E8%A7%A6%E5%8F%91%E5%99%A8%E4%B8%8E%E4%BA%8B%E5%8A%A1/"},"author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://yoursite.com/"},"publisher":{"@type":"Organization","name":"Hexo","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://yoursite.com/2024/04/29/%E8%A7%A6%E5%8F%91%E5%99%A8%E4%B8%8E%E4%BA%8B%E5%8A%A1/","wordCount":0,"datePublished":"2024-04-29T09:17:17.000Z","dateModified":"2024-04-30T00:11:07.803Z","articleSection":"Mysql","keywords":"Mysql","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Hexo","url":"http://yoursite.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://yoursite.com/","sameAs":["https://github.com/volantis-x"],"description":"test description"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://yoursite.com/","name":"Hexo"}},{"@type":"ListItem","position":2,"item":{"@id":"http://yoursite.com/categories/Mysql/","name":"Mysql"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Hexo","url":"http://yoursite.com/","keywords":null,"description":"test description","author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://yoursite.com/","description":"test description"},"publisher":{"@type":"Organization","name":"Hexo","url":"http://yoursite.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://yoursite.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","description":"test description","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage"},"author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://yoursite.com/"},"publisher":{"@type":"Organization","name":"Hexo","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"wordCount":0,"image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
